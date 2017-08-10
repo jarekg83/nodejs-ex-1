@@ -12,6 +12,6 @@ node {
     openshiftVerifyDeployment depCfg: 'nodejsci', replicaCount: 1, verifyReplicaCount: true
   }
   stage ('system test') {
-    sh "curl -s http://nodejsci:8080/ | grep 'Hello'"
+    sh "curl -s http://nodejsci-myjenkins.os.hr4.local/ | grep 'Hello'"
   }
 }
